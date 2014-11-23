@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Tests", "01_Tests", "{771ED18A-5E50-49F7-8C5E-681B0EE63EFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D3C72686-6D08-4E5C-A1DB-0A5109064F14}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00_Code", "00_Code", "{A7E403F0-4C82-47C9-877A-5DAB17FD3C0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loadrix.Core", "Loadrix.Core\Loadrix.Core.csproj", "{499CB8BB-D071-4E39-8D88-6D92AF3AC286}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loadrix.Core.Tests", "Loadrix.Core.Tests\Loadrix.Core.Tests.csproj", "{C1A2249B-158A-4164-90E7-CAEEB76A8903}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loadrix.ExtensionCompiler.Tests", "Loadrix.ExtensionCompiler.Tests\Loadrix.ExtensionCompiler.Tests.csproj", "{D32F5323-185D-42C1-8D29-3F502DCBDE1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loadrix.ExtensionCompiler", "Loadrix.ExtensionCompiler\Loadrix.ExtensionCompiler.csproj", "{F9292119-D4C2-42B0-B677-BDA7C7852F0B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Loadrix.MonoGame", "Loadrix.MonoGame\Loadrix.MonoGame.shproj", "{48057856-254F-4D63-959D-0581955B132A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loadrix.MonoGame.Tests", "Loadrix.MonoGame.Tests\Loadrix.MonoGame.Tests.csproj", "{121C4689-6EC4-4687-9766-D1A0A9AD5781}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Loadrix.MonoGame\Loadrix.MonoGame.projitems*{121c4689-6ec4-4687-9766-d1a0a9ad5781}*SharedItemsImports = 4
+		Loadrix.MonoGame\Loadrix.MonoGame.projitems*{48057856-254f-4d63-959d-0581955b132a}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{499CB8BB-D071-4E39-8D88-6D92AF3AC286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{499CB8BB-D071-4E39-8D88-6D92AF3AC286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{499CB8BB-D071-4E39-8D88-6D92AF3AC286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{499CB8BB-D071-4E39-8D88-6D92AF3AC286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1A2249B-158A-4164-90E7-CAEEB76A8903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1A2249B-158A-4164-90E7-CAEEB76A8903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1A2249B-158A-4164-90E7-CAEEB76A8903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1A2249B-158A-4164-90E7-CAEEB76A8903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D32F5323-185D-42C1-8D29-3F502DCBDE1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D32F5323-185D-42C1-8D29-3F502DCBDE1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D32F5323-185D-42C1-8D29-3F502DCBDE1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D32F5323-185D-42C1-8D29-3F502DCBDE1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9292119-D4C2-42B0-B677-BDA7C7852F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9292119-D4C2-42B0-B677-BDA7C7852F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9292119-D4C2-42B0-B677-BDA7C7852F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9292119-D4C2-42B0-B677-BDA7C7852F0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{121C4689-6EC4-4687-9766-D1A0A9AD5781}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{121C4689-6EC4-4687-9766-D1A0A9AD5781}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{121C4689-6EC4-4687-9766-D1A0A9AD5781}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{121C4689-6EC4-4687-9766-D1A0A9AD5781}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{499CB8BB-D071-4E39-8D88-6D92AF3AC286} = {A7E403F0-4C82-47C9-877A-5DAB17FD3C0A}
+		{C1A2249B-158A-4164-90E7-CAEEB76A8903} = {771ED18A-5E50-49F7-8C5E-681B0EE63EFF}
+		{D32F5323-185D-42C1-8D29-3F502DCBDE1E} = {771ED18A-5E50-49F7-8C5E-681B0EE63EFF}
+		{F9292119-D4C2-42B0-B677-BDA7C7852F0B} = {A7E403F0-4C82-47C9-877A-5DAB17FD3C0A}
+		{48057856-254F-4D63-959D-0581955B132A} = {A7E403F0-4C82-47C9-877A-5DAB17FD3C0A}
+		{121C4689-6EC4-4687-9766-D1A0A9AD5781} = {771ED18A-5E50-49F7-8C5E-681B0EE63EFF}
+	EndGlobalSection
+EndGlobal

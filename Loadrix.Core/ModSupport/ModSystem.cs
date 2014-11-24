@@ -21,9 +21,9 @@ namespace Loadrix.Core.ModSupport
     public class ModSystem
     {
         public IReadOnlyCollection<Mod> ActiveMods { get; private set; }
-        private readonly IModProvider _provider;
+        private readonly ModProvider _provider;
 
-        public ModSystem(IModProvider provider, IEnumerable<String> selectedMods)
+        public ModSystem(ModProvider provider, IEnumerable<String> selectedMods)
         {
             _provider = provider;
 
@@ -36,50 +36,6 @@ namespace Loadrix.Core.ModSupport
                 throw new LoadrixModException("Mods missing from system: {0}", String.Join(", ", missingMods));
             }
 
-            var orderedMods = GenerateModOrder(modSet.Select(m => allModMetadatas[m]), allModMetadatas);
-        }
-
-
-
-        private static List<ModMetadata> GenerateModOrder(IEnumerable<ModMetadata> selectedMods,
-            Dictionary<String, ModMetadata> allMods)
-        {
-            var mods = selectedMods.ToList();
-            var working = new List<ModMetadata>(mods.Count);
-            var completed = new HashSet<ModMetadata>();
-
-            foreach (ModMetadata m in mods) GenerateModOrderImpl(m, working, completed, allMods, 0);
-
-            return working;
-        }
-
-        private static void GenerateModOrderImpl(ModMetadata metadata, 
-            List<ModMetadata> working, HashSet<ModMetadata> completed, 
-            Dictionary<String, ModMetadata> allMods, Int32 stackDepth = 0)
-        {
-            if (stackDepth > 20) throw new LoadrixModException("Endless loop in mod resolution.");
-
-            foreach (var constraint in metadata.Constraints)
-            {
-                ModMetadata dependent;
-                if (!allMods.TryGetValue(constraint.UniqueName, out dependent))
-                {
-                    throw new LoadrixModException("Mod '{0}' requires '{1}', which could not be found.",
-                                                  metadata, constraint);
-                }
-                if (!constraint.Matches(dependent))
-                {
-                    throw new LoadrixModException("Mod '{0}' requires '{1}', but got '{2}'.",
-                                                  metadata, constraint, dependent);
-                }
-
-                if (!completed.Contains(dependent))
-                {
-                    GenerateModOrderImpl(dependent, working, completed, allMods, stackDepth + 1);
-                }
-
-                working.Add(metadata);
-            }
         }
     }
 }

@@ -34,13 +34,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Content\ContentScope.cs" />
+    <Compile Include="Content\IContent.cs" />
+    <Compile Include="Content\LoadrixContentException.cs" />
+    <Compile Include="EasyDisposable.cs" />
     <Compile Include="Extensions\ExtensionLoader.cs" />
     <Compile Include="Extensions\ExtensionAttribute.cs" />
     <Compile Include="Context\ILoadrixContext.cs" />
-    <Compile Include="Context\LoadrixContext.cs" />
-    <Compile Include="Context\LoadrixMultiContext.cs" />
     <Compile Include="Extensions\ExtensionTypeRecord.cs" />
-    <Compile Include="Extensions\ILoader.cs" />
+    <Compile Include="Extensions\IExtensionLoader.cs" />
     <Compile Include="Extensions\LoadrixExtensionException.cs" />
     <Compile Include="LoadrixException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

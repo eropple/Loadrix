@@ -15,8 +15,7 @@ Loadrix is implemented as a set of assemblies:
 
 - **Loadrix.Core** is a Portable Class Library that contains the required
   interfaces and high-level implementations that are used by consuming
-  applications. In particular, it includes the ExtensionLoader, which is
-  used 
+  applications.
 - **Loadrix.ExtensionCompiler** is a desktop class library (designed for .NET
   and Mono) that implements dynamic compilation via `CSharpCodeProvider` for
   a specified source tree.

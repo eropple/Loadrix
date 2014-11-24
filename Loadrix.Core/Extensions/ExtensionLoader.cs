@@ -11,7 +11,7 @@ namespace Loadrix.Core.Extensions
     /// Reflection-based loader that scans a set of supplied assemblies for extension classes tagged
     /// with a specified attribute and key nane.
     /// </summary>
-    public class ExtensionLoader : ILoader
+    public class ExtensionLoader : IExtensionLoader
     {
         public static readonly Object[] EmptyParams = { };
         public static readonly Type[] NoParameters = { };

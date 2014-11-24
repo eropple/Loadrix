@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Loadrix.Core.Extensions
 {
-    public interface ILoader
+    public interface IExtensionLoader
     {
         /// <summary>
         /// All extension types supported by this loader.

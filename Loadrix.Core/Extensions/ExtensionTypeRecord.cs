@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,14 +11,27 @@ namespace Loadrix.Core.Extensions
     {
         public readonly Type ExtensionType;
         public readonly Type AttributeType;
-        public readonly IEnumerable<Type> ConstructorParameters;
+        internal readonly Type[] ConstructorParametersArray;
 
-        public ExtensionTypeRecord(Type extensionType, Type attributeType, 
+        public IReadOnlyCollection<Type> ConstructorParameters
+        {
+            get { return new ReadOnlyCollection<Type>(ConstructorParametersArray); }
+        }
+
+        private ExtensionTypeRecord(Type extensionType, Type attributeType, 
                                    IEnumerable<Type> constructorParameters)
         {
             ExtensionType = extensionType;
             AttributeType = attributeType;
-            ConstructorParameters = constructorParameters.ToList(); // avoiding later mutation
+            ConstructorParametersArray = constructorParameters as Type[] ?? constructorParameters.ToArray();
+        }
+
+        public static ExtensionTypeRecord Create<TExtensionType, TExtensionAttributeType>(
+                IEnumerable<Type> constructorParameters)
+            where TExtensionType : class 
+            where TExtensionAttributeType : ExtensionAttribute
+        {
+            return new ExtensionTypeRecord(typeof(TExtensionType), typeof(TExtensionAttributeType), constructorParameters);
         }
     }
 }

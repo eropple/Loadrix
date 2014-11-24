@@ -40,6 +40,8 @@
     <Compile Include="Context\LoadrixContext.cs" />
     <Compile Include="Context\LoadrixMultiContext.cs" />
     <Compile Include="Extensions\ExtensionTypeRecord.cs" />
+    <Compile Include="Extensions\LoadrixExtensionException.cs" />
+    <Compile Include="LoadrixException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

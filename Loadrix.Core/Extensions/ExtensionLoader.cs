@@ -33,11 +33,13 @@ namespace Loadrix.Core.Extensions
             foreach (var t in types.Values) dict.Add(t.ExtensionType, 
                                                      new MultiValueDictionary<string, ConstructorInfo>());
 
-            var assemblyTypes = assemblies.Select(a => a.DefinedTypes);
-            foreach (var t in assemblyTypes)
-            {
+            var assemblyTypes = assemblies.Select(
+                a => a.DefinedTypes
+            );
 
-            }
+            // TODO: actually implement.
+
+            return dict;
         }
     }
 }
